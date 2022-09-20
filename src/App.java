@@ -5,7 +5,10 @@ import java.util.ArrayList;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        if(args.length == 0){
+            System.out.println("Nenhum arquivo texto inserido. Leia o README.md");
+            return;
+        }
         String arquivo = args[0];
         String[][] matrizPercorrer = leTexto(arquivo);
         ArrayList<String> caminhoPercorrido = new ArrayList<>();
